@@ -431,7 +431,6 @@ body {
 
 .about-section {
     background: black;
-    position: relative;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -478,4 +477,72 @@ body {
     animation-name: __flash;
     animation: slideFade 0.5s ease forwards;
 
+}
+/* .imp-section {
+    background: black;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.imp-section:hover {
+    background: rgb(0, 0, 0);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+} */
+ .imp-section {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.795);
+    border-radius: 15px;
+}
+.imp-section:hover{
+    background: rgb(0, 0, 0);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.info-col {
+    padding: 20px;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #3d3939, #000000, #012b0b);
+    border-radius: 10px;
+    border: #003503 solid 2px;
+}
+
+.info-card:hover {
+    background: linear-gradient(135deg, #012b0b, #3d3939);
+    border-radius: 10px;
+    border: #01310c solid 2px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: 2s;
+    transform: translateY(-10px) scale(1.03);
+}
+.info{
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #ffe605;
+    border-radius: 10px;
+    border: 2px solid rgb(112, 105, 2);
+    color: rgb(0, 0, 0);
+    padding: 10px 25px;
+    width: fit-content;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    align-self: center;
+    font-style: italic;
+    display: block;
+    margin: 20px auto;
+}
+
+.btn:hover {
+    border-radius: 10px;
+    border: 2px solid rgb(95, 81, 0);
+    color: rgb(16, 16, 16);
+    background-color: #fff8b8;
+    transition: 0.5s;
+    cursor: pointer;
 }
