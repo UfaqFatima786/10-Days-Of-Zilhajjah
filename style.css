@@ -447,12 +447,18 @@ body {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 28px;
+    font-style: italic;
+    animation-name: __flash;
+    animation: slideFade 0.5s ease forwards;
 }
 
 .content-box p {
     color: #e5e7eb;
     line-height: 1.9;
     font-size: 16px;
+    font-style: italic;
+    animation-name: __flash;
+    animation: slideFade 0.5s ease forwards;
 }
 
 .about-img {
