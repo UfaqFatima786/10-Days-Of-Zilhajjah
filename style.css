@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background: linear-gradient(135deg, #3d3939, #000000, #012b0b);
+    color: rgb(255, 255, 255);
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar {
+    background-color: #131313;
+    box-shadow: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    position: sticky !important;
+}
+
+.nav-link {
+    color: white;
+    box-shadow: white;
+    transition: 0.3s ease;
+    font-size: 20px; 
+}
+
+.nav-link:hover {
+    color: #969595;
+    transform: scale(1.05);
+    font-size: 20px;
+}
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero{
+    min-height: 50vh;
+    background: black;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Lantern */
+
+.lantern{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Hanging Line */
+
+.lantern::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: goldenrod;
+    left: 50%;
+    top: -120px;
+}
+
+/* Lantern Image */
+
+.lantern img{
+    width: 65px;
+
+    filter:
+    drop-shadow(0 0 10px gold)
+    drop-shadow(0 0 20px gold);
+
+    animation: swing 3s ease-in-out infinite;
+}
+
+/* Lantern Glow */
+
+.lantern::after{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 50%;
+    filter: blur(40px);
+
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Animation */
+
+@keyframes swing{
+
+    0%{
+        transform: rotate(-5deg);
+    }
+
+    50%{
+        transform: rotate(5deg);
+    }
+
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+
+/* Hero Content */
+
+.hero-content h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 80px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span{
+    color: #D4AF37;
+}
+
+.hero-content p{
+    color: #dcdcdc;
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+
+.hero-btns{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.explore-btn,
+.learn-btn{
+    padding: 14px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+/* Explore Button */
+
+.explore-btn{
+    background: #D4AF37;
+    color: white;
+}
+
+.explore-btn:hover{
+    background: white;
+    color: #020b2d;
+}
+
+/* Learn Button */
+
+.learn-btn{
+    background: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+}
+
+.learn-btn:hover{
+    background: #D4AF37;
+    color: white;
+}
+
+.hero-image img{
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 500px;
+    width: 550px;
+    border-radius: 50%;
+}
+
+.hero-image img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.9s;
+    cursor: pointer;
+    animation-name: __flash;
+    animation: slideFade 0.5s ease forwards;
+
+}
+
+@keyframes float{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .hero{
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .hero-content h1{
+        font-size: 42px;
+        line-height: 60px;
+    }
+
+    .hero-btns{
+        justify-content: center;
+    }
+
+    .hero-image{
+        margin-top: 50px;
+    }
+}
+
+@media(max-width:576px){
+
+    .hero-content h1{
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .hero-content p{
+        font-size: 15px;
+    }
+
+    .explore-btn,
+    .learn-btn{
+        width: 100%;
+    }
+
+    .lantern img{
+        width: 50px;
+    }
+}
+/* 
+.hero{
+    height: 100vh;
+    background: #020b2d;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Lantern */
+
+.lantern{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Common Lantern */
+
+.lantern{
+    position: absolute;
+    z-index: 20;
+}
+
+/* Lantern Line */
+
+.lantern::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    background: rgb(0, 0, 0);
+    left: 50%;
+}
+
+/* Lantern Image */
+
+.lantern img{
+    width: 200px;
+
+    filter:
+    drop-shadow(0 0 10px gold)
+    drop-shadow(0 0 20px gold);
+
+    animation: swing 3s ease-in-out infinite;
+}
+
+/* Glow */
+
+.lantern::after{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 500px;
+    background: rgba(255, 217, 0, 0);
+    border-radius: 50%;
+    filter: blur(40px);
+
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Top Center Lantern */
+
+.lantern-center{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lantern-center::before{
+    height: 120px;
+    top: -120px;
+}
+
+/* Left Bottom Lantern */
+
+.lantern-left{
+    margin-top: 100px;
+    bottom: 200px;
+    left: 250px;
+}
+
+.lantern-left::before{
+    height: 150px;
+    top: -200px;
+}
+
+/* Right Middle Lantern */
+
+.lantern-right{
+    top: 65%;
+    right: 200px;
+}
+
+.lantern-right::before{
+    height: 140px;
+    top: -140px;
+}
+
+/* Swing Animation */
+
+@keyframes swing{
+
+    0%{
+        transform: rotate(-5deg);
+    }
+
+    50%{
+        transform: rotate(5deg);
+    }
+
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+
+/* Line */
+
+.lantern::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 120px;
+    background: goldenrod;
+    left: 50%;
+    top: -120px;
+}
+
+/* Image */
+
+.lantern img{
+    width: 60px;
+
+    filter:
+    drop-shadow(0 0 10px gold)
+    drop-shadow(0 0 20px gold);
+
+    animation: swing 3s ease-in-out infinite;
+}
+
+/* Swing Animation */
+
+@keyframes swing{
+
+    0%{
+        transform: rotate(-5deg);
+    }
+
+    50%{
+        transform: rotate(5deg);
+    }
+
+    100%{
+        transform: rotate(-5deg);
+    }
+} 
+    
+.heading-1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fa00c4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+.heading-1:hover {
+    font-size: 55px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    transition: 0.9s;
+    cursor: pointer;
+    animation-name: __flash;
+    animation: slideFade 0.5s ease forwards;
+
+
+}
